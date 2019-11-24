@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/font awesome/css/all.css">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="header">
+
+        <div class="container">
+            <div class="nav">
+                <form class="nav__form">
+                    <input type="text" class="nav__input" placeholder="only italian city">
+                    <button class="nav__btn" data-modal="#weather"><i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="main-header">
+                <img src="/image/italy.svg" alt="logo" class="main-header__logo">
+                <h1 class="main-header__title">Italy</h1>
+                <p class="main-header__text">Travel Tips You Need To Know the Weather Before Visiting Italy</p>
+            </div>
+
+            <div class="header-map">
+                <canvas class="canvas" width="600px" height="500px">
+
+                </canvas>
+                <div class="header-map__city">
+                    <span class="header__map__city c1">Torino</span>
+                    <span class="header__map__city c2">Milano</span>
+                    <span class="header__map__city c3">Venezia</span>
+                    <span class="header__map__city c4">Firenze</span>
+                    <span class="header__map__city c5">Roma</span>
+                    <span class="header__map__city c6">Napoli</span>
+                    <span class="header__map__city c7">Palermo</span>
+
+                </div>
+            </div>
+
+            <div class="modal-wrap hide" id="weather">
+                <div class="modal-window">
+                    <ul class="weather">
+                        <li class="weather__item li-1"></li>
+                        <li class="weather__item li-2"></li>
+                        <li class="weather__item li-3"></li>
+                        <li class="weather__item li-4"></li>
+                        <li class="weather__item li-5"></li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="video-bg">
+        <video src="/video/coverr-positano-landscape-1570959933887.mp4" autoplay muted loop></video>
+    </div>
+
+
+</body>
+<script src="/main.js"></script>
+
+</html>

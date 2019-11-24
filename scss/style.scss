@@ -1,0 +1,173 @@
+@import "mixin";
+@import "variables";
+@import "reset";
+
+
+.container {
+
+    @include wh(1170px,900px);
+    @include flex($display,start,column,$align);
+    font-family: $ff;
+    margin: 0 auto;
+    padding: $padd;
+
+}
+
+.nav{
+  
+    @include wh(900px,200px);
+    border: 1px solid red;
+    @include flex($display,center,row,flex-start);
+
+
+    .nav__form{
+        border: 2px solid #fff;
+        border-radius: $br;
+        @include flex($display,center,row,center);
+
+        .nav__input {
+
+        @include wh(150px, 40px);
+        @include inpstyle;
+        font-size: ($fz + 5);
+        color: $fc;
+        padding-left: 80px;  
+        
+        &::placeholder{
+            color: $fc;
+        }
+    }
+  
+    .nav__btn {
+     background-color: #42a5f5 ;
+     color: $fc;
+     border: none;
+     border-radius: $br;
+     position: relative;
+     @include pos(-225px,0,0,0);
+     @include fonts($ff,$fw,14px,$txt,$fc);
+     @include wh(60px,30px);
+     line-height: ($lh - 25px);
+ 
+    }
+    }
+   
+}
+
+.header-map{
+    @include wh(inherit,auto);
+    border: 1px solid red;
+   
+}
+
+.main-header {
+    @include fonts($ff,$fw,$fz,$txt,$fc);
+    @include flex($display,$justify,column,$align);
+    @include wh(900px,auto);
+   
+ 
+    line-height: $lh;
+   
+    .main-header__title{
+        @include fonts($ff,600,60px,$txt,$fc);
+        margin-top: ($margt / 2);
+        text-transform: uppercase;
+    }
+    .main-header__text{
+        @include fonts($ff,$fw,20px,$txt,$fc);
+    }
+    .main-header__logo{
+        @include wh(40px,40px);
+
+    }
+
+}
+
+
+.header-map {
+
+    @include wh(inherit,auto);
+    @include flex($display,flex-start,column,$align);
+    @include fonts($ff,$fw,26px,$txt,$fc);
+
+    position: relative;
+
+
+    .header-map__city{
+        @include flex($display,flex-start,column,$align);
+        
+        position: absolute;
+        
+        .c1,.c2,.c3,.c4,.c5,.c6{
+            position: absolute;
+            @include pos(-341%,193%,0,0);
+            cursor: pointer;
+           
+        }
+        
+        .c2{
+            @include pos(0,180%,0,0);
+        }
+
+        .c3{
+            @include pos(170%,180%,0,0);
+        }
+        .c4{
+            @include pos(-109%,514%,0,0);
+        }
+
+        .c5{
+            @include pos(-317%,1022%,0,0);
+        }
+
+        .c6{
+          
+            @include pos(-487%,1176%,0,0);
+        }
+
+        }
+
+    }
+.c7 {
+    position: relative;
+    top:  409px;
+    left: -115px; 
+}
+    
+
+.video-bg {
+    position: fixed;
+    @include pos(0,0,0,0);
+    z-index: -1;
+    background: url('/video/coverr-positano-landscape-1570959933887.jpg');
+    background-repeat: no-repeat;
+}
+
+.modal-wrap{
+    background-color: rgba(0,0,0, 0);
+    position: fixed;
+    @include pos(0,0,0,0);
+    @include flex($display,center,column,$align);
+
+    .modal-window{
+        @include wh(300px,300px);
+        @include flex($display,center,column,$align);
+        background-color: rgba(0,0,0, 0.5);
+
+      
+
+        .weather{
+            @include fonts($ff,$fw,20px,$txt,$fc);
+
+            .weather__item{
+                margin: ($margt - 80px);
+            }
+            .li-1{
+                font-size: ($fz + 15px);
+            }
+        }
+    }
+}
+.hide {
+    display: none;
+}

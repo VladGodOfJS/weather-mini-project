@@ -1,0 +1,34 @@
+@mixin wh($width,$height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin flex($flex,$justify,$direction,$align){
+    display: $flex;
+    justify-content: $justify;
+    flex-direction: $direction;
+    align-items: center;
+}
+
+@mixin fonts($ff,$fw,$fz,$txt,$fc){
+    font-family: $ff;
+    font-weight: $fw;
+    font-size: $fz;
+    text-align: $txt;
+    color: $fc;
+}
+
+
+@mixin inpstyle {
+    outline: $outlin;
+    border: none;
+    background: none;
+    
+}
+
+@mixin pos($l,$t,$r,$b) {
+   left: $l;
+   top: $t;
+   right: $r;
+   bottom: $b;
+}
